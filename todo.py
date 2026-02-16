@@ -24,7 +24,7 @@ while True:
         file.close()
     elif choice == "3":
         r = input("What task do you want to remove: \n")
-        tasks.remove(r)
+        tasks.remove(r.lowercase())
         file = open("tasks.txt","w")
         for task in tasks:
             file.write(task+ "\n")
@@ -32,4 +32,4 @@ while True:
     elif choice == "4":
         break
     else:
-        print("invalid input")
+        print("Invalid Update")
