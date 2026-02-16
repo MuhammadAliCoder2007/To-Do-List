@@ -16,7 +16,7 @@ while True:
     if choice == "1":
         print(tasks)
     elif choice == "2":
-        t = input("What task do you want to add: \n")
+        t = input("What task do you want to add: \n").lower()
         tasks.append(t)
         file = open("tasks.txt","w")
         for task in tasks:
@@ -24,7 +24,7 @@ while True:
         file.close()
     elif choice == "3":
         r = input("What task do you want to remove: \n")
-        tasks.remove(r.lowercase())
+        tasks.remove(r)
         file = open("tasks.txt","w")
         for task in tasks:
             file.write(task+ "\n")
